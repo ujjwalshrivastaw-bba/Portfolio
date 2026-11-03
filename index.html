@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ujjwal Kumar | BBA Student · Accounts, Taxation & Business Analytics</title>
+<meta name="description" content="Portfolio of Ujjwal Kumar, final-year BBA student at Invertis University, Bareilly. GST, Income Tax, Power BI, Tally and business analytics.">
+<meta name="theme-color" content="#0d1b2e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%230d1b2e%27/><text x=%2750%27 y=%2768%27 font-size=%2762%27 text-anchor=%27middle%27 fill=%27%23e9b44c%27 font-family=%27serif%27 font-weight=%27700%27>U</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1b2e;--bg2:#12253d;--card:#152a45;--line:#27415f;--ink:#f3efe6;--mute:#9fb0c6;--gold:#e9b44c;--teal:#4fd1b5;--r:18px;
+--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:6rem 0}
+h1,h2,h3{font-family:var(--serif);line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;margin-bottom:.6rem}
+.sub{color:var(--mute);max-width:56ch;margin-bottom:2.8rem}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--teal));z-index:100}
+
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0);transition:.3s}
+header.s{background:rgba(13,27,46,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-weight:900;font-size:1.4rem}
+.logo b{color:var(--gold)}
+.links{display:flex;gap:2rem;font-size:.95rem;font-weight:500}
+.links a{color:var(--mute);transition:.2s}
+.links a:hover,.links a.on{color:var(--gold)}
+.hire{border:1px solid var(--gold);color:var(--gold);padding:.5rem 1.1rem;border-radius:99px;font-weight:700;font-size:.9rem;transition:.2s}
+.hire:hover{background:var(--gold);color:var(--bg)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;width:24px;height:2px;background:var(--ink);margin:6px auto;transition:.3s}
+.burger.o i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.o i:nth-child(2){opacity:0}
+.burger.o i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* hero */
+#hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:7rem 0 4rem;overflow:hidden}
+#chart{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+#hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 40%,rgba(13,27,46,.92) 20%,rgba(13,27,46,.35) 75%);z-index:1}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center}
+.tag{display:inline-flex;gap:.6rem;align-items:center;font-size:.9rem;color:var(--mute);border:1px solid var(--line);padding:.4rem 1rem;border-radius:99px;margin-bottom:1.5rem;background:rgba(21,42,69,.6)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:900}
+h1 .l{display:block;overflow:hidden}
+h1 .l span{display:inline-block;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .l:nth-child(2) span{animation-delay:.15s;color:var(--gold)}
+@keyframes up{to{transform:none}}
+.role{font-size:clamp(1.1rem,2.6vw,1.5rem);margin:1.4rem 0 .8rem;min-height:2.2em;color:var(--ink)}
+.role span{color:var(--teal);font-weight:700}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--gold);margin-left:3px;vertical-align:-.15em;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mute);max-width:52ch;margin-bottom:2rem}
+.btns{display:flex;flex-wrap:wrap;gap:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.7rem;border-radius:99px;font-weight:700;font-family:inherit;font-size:1rem;cursor:pointer;border:1px solid var(--gold);transition:.25s}
+.btn.p{background:var(--gold);color:var(--bg)}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(233,180,76,.3)}
+.btn.g{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.g:hover{border-color:var(--gold);color:var(--gold)}
+.photo{justify-self:center;position:relative;width:min(300px,70vw);aspect-ratio:4/5}
+.photo:before{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:28px;transform:rotate(4deg);transition:.5s}
+.photo:hover:before{transform:rotate(-2deg)}
+.photo .f{position:absolute;inset:0;border-radius:24px;overflow:hidden;background:var(--card);display:grid;place-items:center;font-family:var(--serif);font-size:6rem;font-weight:900;color:var(--gold)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chip-f{position:absolute;right:-12px;bottom:28px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:.6rem .9rem;font-size:.82rem;box-shadow:0 12px 30px rgba(0,0,0,.4);animation:fl 5s ease-in-out infinite}
+.chip-f b{display:block;color:var(--teal)}
+@keyframes fl{50%{transform:translateY(-8px)}}
+
+/* ticker */
+.tick{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;white-space:nowrap;padding:1rem 0}
+.tick div{display:inline-block;animation:mq 30s linear infinite}
+.tick span{margin:0 1.6rem;color:var(--mute);font-weight:500}
+.tick span:before{content:"▲";color:var(--teal);font-size:.7em;margin-right:.6rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem}
+.about p{color:var(--mute);margin-bottom:1rem}
+.about p b{color:var(--ink)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem}
+.stat b{font-family:var(--serif);font-size:2.4rem;color:var(--gold);display:block;line-height:1}
+.stat span{color:var(--mute);font-size:.9rem}
+
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.8rem;transition:.3s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.card h3{font-size:1.4rem;margin-bottom:1.2rem}
+.meter{margin-bottom:1rem}
+.meter div{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:.35rem}
+.meter i{display:block;height:6px;background:var(--bg);border-radius:9px;overflow:hidden}
+.meter i b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--teal));border-radius:9px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.pills{display:flex;flex-wrap:wrap;gap:.6rem}
+.pills span{border:1px solid var(--line);padding:.45rem 1rem;border-radius:99px;font-size:.9rem;color:var(--mute);background:var(--bg)}
+
+/* timeline */
+.tl{position:relative;padding-left:2rem;border-left:2px solid var(--line)}
+.tl:before{content:"";position:absolute;left:-2px;top:0;width:2px;height:var(--p,0%);background:var(--gold)}
+.item{position:relative;margin-bottom:2rem}
+.item:before{content:"";position:absolute;left:calc(-2rem - 7px);top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--bg)}
+.item .d{color:var(--teal);font-size:.88rem;font-weight:700;margin-bottom:.3rem}
+.item h3{font-size:1.5rem}
+.item .o{color:var(--mute);margin-bottom:.8rem}
+.item ul{list-style:none}
+.item li{color:var(--mute);padding-left:1.4rem;position:relative;margin-bottom:.45rem}
+.item li:before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--gold)}
+
+/* project */
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.vs{display:flex;align-items:center;justify-content:center;gap:1.2rem}
+.bank{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-weight:700;border:2px solid var(--gold);background:var(--bg)}
+.bank small{display:block;font:500 .72rem var(--sans);color:var(--mute)}
+.bank.b2{border-color:var(--teal)}
+.vs em{font-family:var(--serif);color:var(--mute)}
+.proj h3{font-size:1.7rem;margin-bottom:1rem}
+.proj li{color:var(--mute);margin-left:1.1rem;margin-bottom:.45rem}
+
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.cert b{display:block;font-family:var(--serif);font-size:1.15rem;line-height:1.3;margin-bottom:.5rem}
+.cert span{color:var(--teal);font-size:.88rem;font-weight:700}
+
+/* contact */
+.ct{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem}
+.cl a{display:flex;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid var(--line);transition:.2s;word-break:break-word}
+.cl a:hover{color:var(--gold);padding-left:.5rem}
+.cl small{display:block;color:var(--mute)}
+.ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-size:1.1rem}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:2rem;display:grid;gap:1.1rem}
+label{font-size:.88rem;color:var(--mute);display:block;margin-bottom:.35rem}
+input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;color:var(--ink);font:inherit;font-size:1rem;transition:.2s}
+input:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(233,180,76,.2)}
+textarea{min-height:140px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#msg{min-height:1.5em;font-size:.95rem}
+#msg.ok{color:var(--teal)}#msg.er{color:#ff8a80}
+footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;color:var(--mute);font-size:.9rem}
+.top{position:fixed;right:1.2rem;bottom:calc(1.2rem + env(safe-area-inset-bottom,0));width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--bg);border:0;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
+.top.v{opacity:1;pointer-events:auto}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+section{padding:4.5rem 0}
+.burger{display:block}
+.links{position:fixed;inset:68px 0 auto;flex-direction:column;gap:0;background:rgba(13,27,46,.98);padding:1rem 1.5rem 1.5rem;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s;font-size:1.1rem}
+.links.o{transform:none}
+.links a{padding:.9rem 0;border-bottom:1px solid var(--line)}
+.hire{display:none}
+.hero-in,.about,.proj,.ct{grid-template-columns:1fr}
+.photo{order:-1;width:min(220px,60vw);margin:0 auto 1rem}
+.proj{padding:1.5rem}
+.bank{width:105px;height:105px}
+}
+@media(prefers-reduced-motion:reduce){
+*{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+h1 .l span{transform:none}.rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header id="hd">
+ <div class="wrap"><nav>
+  <a href="#hero" class="logo">Ujjwal<b>.</b></a>
+  <div class="links" id="links">
+   <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#project">Project</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+  </div>
+  <a class="hire" href="#contact">Hire me</a>
+  <button class="burger" id="bg" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+ </nav></div>
+</header>
+
+<main>
+<section id="hero">
+ <canvas id="chart" aria-hidden="true"></canvas>
+ <div class="wrap hero-in">
+  <div>
+   <div class="tag"><span class="dot"></span>Final-year BBA · Open to internships & entry roles</div>
+   <h1 aria-label="Ujjwal Kumar"><span class="l"><span>Ujjwal</span></span><span class="l"><span>Kumar</span></span></h1>
+   <p class="role">I work in <span id="type"></span><i class="caret"></i></p>
+   <p class="lead">BBA student at Invertis University, Bareilly, with hands-on experience in GST filing and Income Tax Returns at a Chartered Accountants firm. I turn business data into clear decisions.</p>
+   <div class="btns">
+    <a class="btn p" href="#contact">Let’s talk</a>
+    <a class="btn g" href="#experience">See my experience</a>
+    <a class="btn g" href="UJJWAL_KUMAR.pdf" download>Download resume</a>
+   </div>
+  </div>
+  <div class="photo">
+   <div class="f">U</div>
+   <img src="photo.jpg" alt="Portrait of Ujjwal Kumar" onerror="this.remove()">
+   <div class="chip-f"><b>GST · ITR · Tally</b>6 weeks at a CA firm</div>
+  </div>
+ </div>
+</section>
+
+<div class="tick" aria-hidden="true"><div>
+ <span>GST Compliance</span><span>Income Tax Returns</span><span>Power BI</span><span>Tally</span><span>MS Excel</span><span>Business Analytics</span><span>Investment Management</span><span>Financial Literacy</span>
+ <span>GST Compliance</span><span>Income Tax Returns</span><span>Power BI</span><span>Tally</span><span>MS Excel</span><span>Business Analytics</span><span>Investment Management</span><span>Financial Literacy</span>
+</div></div>
+
+<section id="about"><div class="wrap">
+ <h2 class="rv">About me</h2>
+ <p class="sub rv">Based in Sugauli, Bihar. Studying in Bareilly, Uttar Pradesh.</p>
+ <div class="about">
+  <div class="rv">
+   <p>I’m <b>Ujjwal Kumar</b>, a final-year <b>BBA</b> student (2024–27) at Invertis University. I enjoy the place where accounting, taxation and data meet.</p>
+   <p>At <b>Kumar Dhananjay & Co.</b> I worked on GST returns, data reconciliation and ITR preparation. Real client records taught me accuracy and deadlines.</p>
+   <p>Outside class I follow market trends, read about business and finance, and practice analytics with Power BI and Excel. I’m looking for a role where I can keep learning and add value from day one.</p>
+  </div>
+  <div class="stats rv">
+   <div class="stat"><b data-n="3">0</b><span>Years of BBA (2024–27)</span></div>
+   <div class="stat"><b data-n="6">0</b><span>Weeks in a CA firm</span></div>
+   <div class="stat"><b data-n="5">0</b><span>Certifications & simulations</span></div>
+   <div class="stat"><b data-n="5">0</b><span>Business tools used</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="skills" style="background:var(--bg2)"><div class="wrap">
+ <h2 class="rv">Skills</h2>
+ <p class="sub rv">The tools I use and the strengths I bring to a team.</p>
+ <div class="sk">
+  <div class="card rv"><h3>Tools</h3>
+   <div class="meter"><div><span>MS Excel</span><span>90%</span></div><i><b data-w="90"></b></i></div>
+   <div class="meter"><div><span>Tally</span><span>85%</span></div><i><b data-w="85"></b></i></div>
+   <div class="meter"><div><span>Power BI</span><span>80%</span></div><i><b data-w="80"></b></i></div>
+   <div class="meter"><div><span>MS Word & PowerPoint</span><span>90%</span></div><i><b data-w="90"></b></i></div>
+  </div>
+  <div class="card rv"><h3>Accounts & tax</h3>
+   <div class="pills"><span>GST return filing</span><span>GST reconciliation</span><span>ITR preparation</span><span>Invoice verification</span><span>Record keeping</span><span>Tax documentation</span></div>
+  </div>
+  <div class="card rv"><h3>Soft skills</h3>
+   <div class="pills"><span>Communication</span><span>Teamwork</span><span>Leadership</span><span>Business analytics</span><span>Research</span><span>Attention to detail</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+ <h2 class="rv">Experience & education</h2>
+ <p class="sub rv">Where I’ve worked and studied.</p>
+ <div class="tl" id="tl">
+  <div class="item rv"><div class="d">10 June 2026 – 24 July 2026</div>
+   <h3>Accounts & Taxation Intern</h3><div class="o">Kumar Dhananjay & Co., Chartered Accountants</div>
+   <ul><li>Gained practical exposure to GST compliance and Income Tax Return (ITR) preparation.</li>
+   <li>Assisted in GST return filing, GST data reconciliation, and invoice and record verification.</li>
+   <li>Prepared Income Tax Returns, handled tax-related documentation, and maintained client records.</li></ul></div>
+  <div class="item rv"><div class="d">2024 – 2027</div>
+   <h3>Bachelor of Business Administration</h3><div class="o">Invertis University, Bareilly · Final year</div></div>
+  <div class="item rv"><div class="d">2024</div>
+   <h3>Higher Secondary (12th, BSEB)</h3><div class="o">Zila School</div></div>
+  <div class="item rv"><div class="d">2022</div>
+   <h3>Secondary (10th, CBSE)</h3><div class="o">CMD Public School</div></div>
+ </div>
+</div></section>
+
+<section id="project" style="background:var(--bg2)"><div class="wrap">
+ <h2 class="rv">Project</h2>
+ <p class="sub rv">Primary research on how customers rate banking services.</p>
+ <div class="proj rv">
+  <div class="vs"><div class="bank"><div>HDFC<small>Private</small></div></div><em>vs</em><div class="bank b2"><div>SBI<small>Public</small></div></div></div>
+  <div>
+   <h3>Customer satisfaction: private (HDFC) vs public (SBI) banking</h3>
+   <ul><li>Conducted primary research to analyse customer satisfaction in banking services.</li>
+   <li>Collected and evaluated data through surveys and questionnaires.</li>
+   <li>Identified key service factors influencing customer experience and satisfaction.</li></ul>
+  </div>
+ </div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+ <h2 class="rv">Certifications</h2>
+ <p class="sub rv">Courses and simulations that sharpened my finance and analytics skills.</p>
+ <div class="certs">
+  <div class="card cert rv"><b>Business Analytics for Management Decision</b><span>NPTEL, IIT Kharagpur (2026)</span></div>
+  <div class="card cert rv"><b>Investment Management Job Simulation</b><span>Forage</span></div>
+  <div class="card cert rv"><b>Markets, Sales and Trading Job Simulation</b><span>Forage</span></div>
+  <div class="card cert rv"><b>National Financial Literacy Quiz</b><span>NISM</span></div>
+  <div class="card cert rv"><b>Cesim Business Simulations</b><span>Invertis University, Bareilly</span></div>
+ </div>
+</div></section>
+
+<section id="contact" style="background:var(--bg2)"><div class="wrap">
+ <h2 class="rv">Get in touch</h2>
+ <p class="sub rv">Have an opportunity or a question? Send a message. It goes straight to my inbox.</p>
+ <div class="ct">
+  <div class="cl rv">
+   <a href="mailto:ujjwalshrivastaw742@gmail.com"><span class="ic">✉</span><span><small>Email</small>ujjwalshrivastaw742@gmail.com</span></a>
+   <a href="tel:+918434988719"><span class="ic">☎</span><span><small>Phone</small>+91 84349 88719</span></a>
+   <a href="https://linkedin.com/in/ujjwal-kumar-42995128a" target="_blank" rel="noopener"><span class="ic">in</span><span><small>LinkedIn</small>ujjwal-kumar-42995128a</span></a>
+   <a href="#hero"><span class="ic">⌂</span><span><small>Location</small>Sugauli, Bihar, India</span></a>
+  </div>
+  <form id="f" class="rv" action="https://formsubmit.co/ujjwalshrivastaw742@gmail.com" method="POST">
+   <input type="hidden" name="_subject" value="New message from your portfolio">
+   <input type="hidden" name="_template" value="table">
+   <input type="hidden" name="_captcha" value="false">
+   <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div><label for="n">Your name</label><input id="n" name="name" required autocomplete="name"></div>
+   <div><label for="e">Your email</label><input id="e" type="email" name="email" required autocomplete="email"></div>
+   <div><label for="m">Message</label><textarea id="m" name="message" required></textarea></div>
+   <button class="btn p" id="sb" type="submit">Send message</button>
+   <div id="msg" role="status" aria-live="polite"></div>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Ujjwal Kumar. Built with care in Bihar.</div></footer>
+<button class="top" id="top" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#y').textContent=new Date().getFullYear();
+
+/* nav */
+var hd=$('#hd'),bar=$('#bar'),top=$('#top'),links=$('#links'),bg=$('#bg'),tl=$('#tl');
+function menu(o){links.classList.toggle('o',o);bg.classList.toggle('o',o);bg.setAttribute('aria-expanded',o)}
+bg.onclick=function(){menu(!links.classList.contains('o'))};
+$$('a',links).forEach(function(a){a.onclick=function(){menu(false)}});
+top.onclick=function(){scrollTo({top:0})};
+function onScroll(){
+ var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+ bar.style.width=(h>0?y/h*100:0)+'%';
+ hd.classList.toggle('s',y>30);top.classList.toggle('v',y>600);
+ var r=tl.getBoundingClientRect(),p=(innerHeight*.6-r.top)/r.height*100;
+ tl.style.setProperty('--p',Math.max(0,Math.min(100,p))+'%');
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* active link */
+var secs=$$('main section[id]'),la=$$('a',links);
+new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)la.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'}).observe&&secs.forEach(function(s){
+ new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)la.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+s.id)})})},{rootMargin:'-45% 0px -50% 0px'}).observe(s)});
+
+/* reveal + counters + meters */
+function count(el){var t=+el.dataset.n,i=0;if(reduce){el.textContent=t;return}
+ var id=setInterval(function(){el.textContent=++i;if(i>=t)clearInterval(id)},200)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+ var t=e.target;t.classList.add('in');
+ $$('[data-w]',t).forEach(function(b){b.style.width=b.dataset.w+'%'});
+ $$('[data-n]',t).forEach(count);io.unobserve(t)})},{threshold:.15});
+$$('.rv').forEach(function(el){io.observe(el)});
+
+/* typing */
+var words=['Accounts & Taxation','GST & Income Tax','Business Analytics','Finance & Markets'],wi=0,ci=0,del=false,tp=$('#type');
+function type(){var w=words[wi];
+ if(reduce){tp.textContent=w;return}
+ tp.textContent=w.slice(0,ci);
+ if(!del&&ci===w.length){del=true;return setTimeout(type,1500)}
+ if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+ ci+=del?-1:1;setTimeout(type,del?40:80)}
+type();
+
+/* hero chart: animated market line */
+var cv=$('#chart'),cx=cv.getContext('2d'),W,H,pts=[],t0=0,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+ var n=Math.ceil(W/38)+1;pts=[];var v=.62;
+ for(var i=0;i<n;i++){v+=(Math.random()-.46)*.09;v=Math.max(.2,Math.min(.8,v));pts.push(v)}}
+function draw(ts){
+ var prog=reduce?1:Math.min(1,(ts-t0)/3200),eased=1-Math.pow(1-prog,3);
+ cx.clearRect(0,0,W,H);
+ cx.strokeStyle='rgba(39,65,95,.45)';cx.lineWidth=1;
+ for(var g=1;g<6;g++){var gy=H*g/6;cx.beginPath();cx.moveTo(0,gy);cx.lineTo(W,gy);cx.stroke()}
+ var step=W/(pts.length-1),cnt=Math.floor((pts.length-1)*eased),
+  drift=reduce?0:Math.sin(ts/1800)*6;
+ cx.beginPath();
+ for(var i=0;i<=cnt;i++){var x=i*step,y=H*(1-pts[i])+drift*(i/pts.length);i?cx.lineTo(x,y):cx.moveTo(x,y)}
+ var lx=cnt*step,ly=H*(1-pts[cnt])+drift*(cnt/pts.length);
+ cx.strokeStyle='#e9b44c';cx.lineWidth=2.5;cx.lineJoin='round';cx.stroke();
+ cx.lineTo(lx,H);cx.lineTo(0,H);cx.closePath();
+ var gr=cx.createLinearGradient(0,0,0,H);gr.addColorStop(0,'rgba(233,180,76,.22)');gr.addColorStop(1,'rgba(233,180,76,0)');
+ cx.fillStyle=gr;cx.fill();
+ cx.beginPath();cx.arc(lx,ly,5,0,7);cx.fillStyle='#4fd1b5';cx.fill();
+ cx.beginPath();cx.arc(lx,ly,5+(ts/60%14),0,7);cx.strokeStyle='rgba(79,209,181,'+(1-(ts/60%14)/14)+')';cx.lineWidth=1.5;cx.stroke();
+ if(!reduce&&document.visibilityState==='visible')requestAnimationFrame(draw);
+ else if(!reduce)requestAnimationFrame(draw)}
+size();addEventListener('resize',function(){size()});
+requestAnimationFrame(function(ts){t0=ts;draw(ts)});
+
+/* contact form via FormSubmit (AJAX, falls back to normal post) */
+var f=$('#f'),sb=$('#sb'),msg=$('#msg');
+f.addEventListener('submit',function(ev){
+ if(!window.fetch||!window.FormData)return;
+ ev.preventDefault();
+ sb.disabled=true;sb.textContent='Sending…';msg.className='';msg.textContent='';
+ fetch('https://formsubmit.co/ajax/ujjwalshrivastaw742@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)})
+ .then(function(r){return r.json()})
+ .then(function(d){
+  if(d.success==='true'||d.success===true){f.reset();msg.className='ok';msg.textContent='Message sent. Thank you, I will reply soon.'}
+  else throw 0})
+ .catch(function(){msg.className='er';msg.textContent='Could not send. Please email me directly at ujjwalshrivastaw742@gmail.com.'})
+ .finally(function(){sb.disabled=false;sb.textContent='Send message'});
+});
+})();
+</script>
+</body>
+</html>
