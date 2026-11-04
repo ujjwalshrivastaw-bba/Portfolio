@@ -103,6 +103,20 @@ h1 .l:nth-child(2) span{animation-delay:.15s;color:var(--gold)}
 .pills{display:flex;flex-wrap:wrap;gap:.6rem}
 .pills span{border:1px solid var(--line);padding:.45rem 1rem;border-radius:99px;font-size:.9rem;color:var(--mute);background:var(--bg)}
 
+/* gallery */
+.gallery{display:grid;grid-template-columns:1.15fr .85fr 1fr;grid-auto-rows:250px;gap:1.2rem}
+.gallery-card{position:relative;display:block;min-height:0;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 12px 30px rgba(0,0,0,.16);isolation:isolate}
+.gallery-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(13,27,46,.9));z-index:1;opacity:.8;transition:.3s}
+.gallery-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .3s}
+.gallery-card:hover{border-color:var(--gold);box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.gallery-card:hover img{transform:scale(1.06);filter:saturate(1.12)}
+.gallery-card:hover:after{opacity:1}
+.gallery-wide{grid-column:span 2}
+.gallery-tall{grid-row:span 2}
+.gallery-caption{position:absolute;right:1.2rem;bottom:1.1rem;left:1.2rem;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:1rem}
+.gallery-caption b{font-family:var(--serif);font-size:1.3rem}
+.gallery-caption small{color:var(--teal);font-weight:700;white-space:nowrap}
+
 /* timeline */
 .tl{position:relative;padding-left:2rem;border-left:2px solid var(--line)}
 .tl:before{content:"";position:absolute;left:-2px;top:0;width:2px;height:var(--p,0%);background:var(--gold)}
@@ -163,6 +177,14 @@ section{padding:4.5rem 0}
 .photo{order:-1;width:min(220px,60vw);margin:0 auto 1rem}
 .proj{padding:1.5rem}
 .bank{width:105px;height:105px}
+.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+.gallery-wide{grid-column:span 2}
+.gallery-tall{grid-row:span 2}
+}
+@media(max-width:520px){
+.gallery{grid-template-columns:1fr;grid-auto-rows:280px}
+.gallery-wide,.gallery-tall{grid-column:auto;grid-row:auto}
+.gallery-caption b{font-size:1.15rem}
 }
 @media(prefers-reduced-motion:reduce){
 *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -176,7 +198,7 @@ h1 .l span{transform:none}.rv{opacity:1;transform:none}
  <div class="wrap"><nav>
   <a href="#hero" class="logo">Ujjwal<b>.</b></a>
   <div class="links" id="links">
-   <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#project">Project</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+   <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#gallery">Gallery</a><a href="#project">Project</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
   </div>
   <a class="hire" href="#contact">Hire me</a>
   <button class="burger" id="bg" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
@@ -226,6 +248,29 @@ h1 .l span{transform:none}.rv{opacity:1;transform:none}
    <div class="stat"><b data-n="5">0</b><span>Certifications & simulations</span></div>
    <div class="stat"><b data-n="5">0</b><span>Business tools used</span></div>
   </div>
+ </div>
+</div></section>
+
+<section id="gallery" style="background:var(--bg2)"><div class="wrap">
+ <h2 class="rv">Gallery</h2>
+ <p class="sub rv">A few moments from my journey, captured along the way.</p>
+ <div class="gallery">
+  <a class="gallery-card gallery-wide rv" href="A.jpeg" target="_blank" rel="noopener">
+   <img src="A.jpeg" alt="Ujjwal Kumar in a landscape photograph" loading="lazy">
+   <span class="gallery-caption"><b>Moments that matter</b><small>View photo ↗</small></span>
+  </a>
+  <a class="gallery-card gallery-tall rv" href="B.jpeg" target="_blank" rel="noopener">
+   <img src="B.jpeg" alt="Ujjwal Kumar in a portrait photograph" loading="lazy">
+   <span class="gallery-caption"><b>Growing with purpose</b><small>View photo ↗</small></span>
+  </a>
+  <a class="gallery-card rv" href="P.jpeg" target="_blank" rel="noopener">
+   <img src="P.jpeg" alt="Ujjwal Kumar in a personal photograph" loading="lazy">
+   <span class="gallery-caption"><b>Personal highlights</b><small>View photo ↗</small></span>
+  </a>
+  <a class="gallery-card rv" href="t.jpeg" target="_blank" rel="noopener">
+   <img src="t.jpeg" alt="Ujjwal Kumar in a personal photograph" loading="lazy">
+   <span class="gallery-caption"><b>Memories in focus</b><small>View photo ↗</small></span>
+  </a>
  </div>
 </div></section>
 
