@@ -158,6 +158,11 @@ textarea{min-height:140px;resize:vertical}
 .hp{position:absolute;left:-9999px}
 #msg{min-height:1.5em;font-size:.95rem}
 #msg.ok{color:var(--teal)}#msg.er{color:#ff8a80}
+.captcha{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;align-items:end}
+.captcha label{grid-column:1/-1;margin-bottom:0}
+.captcha-question{display:flex;align-items:center;justify-content:center;min-height:52px;padding:.7rem 1rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--gold);font-weight:700;letter-spacing:.04em}
+.captcha-refresh{min-height:52px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--mute);font:inherit;cursor:pointer;transition:.2s}
+.captcha-refresh:hover{border-color:var(--gold);color:var(--gold)}
 footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;color:var(--mute);font-size:.9rem}
 .top{position:fixed;right:1.2rem;bottom:calc(1.2rem + env(safe-area-inset-bottom,0));width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--bg);border:0;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
 .top.v{opacity:1;pointer-events:auto}
@@ -351,10 +356,17 @@ h1 .l span{transform:none}.rv{opacity:1;transform:none}
    <input type="hidden" name="_subject" value="New message from your portfolio">
    <input type="hidden" name="_template" value="table">
    <input type="hidden" name="_captcha" value="false">
+   <input type="hidden" name="_replyto" id="replyto">
    <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
    <div><label for="n">Your name</label><input id="n" name="name" required autocomplete="name"></div>
    <div><label for="e">Your email</label><input id="e" type="email" name="email" required autocomplete="email"></div>
    <div><label for="m">Message</label><textarea id="m" name="message" required></textarea></div>
+   <div class="captcha">
+    <label for="captcha-answer">Security check: solve this simple sum</label>
+    <div class="captcha-question" id="captcha-question" aria-live="polite"></div>
+    <div><input id="captcha-answer" inputmode="numeric" pattern="[0-9]*" autocomplete="off" placeholder="Your answer" required></div>
+    <button class="captcha-refresh" id="captcha-refresh" type="button" aria-label="Get a new security question">↻ New question</button>
+   </div>
    <button class="btn p" id="sb" type="submit">Send message</button>
    <div id="msg" role="status" aria-live="polite"></div>
   </form>
@@ -437,15 +449,24 @@ size();addEventListener('resize',function(){size()});
 requestAnimationFrame(function(ts){t0=ts;draw(ts)});
 
 /* contact form via FormSubmit (AJAX, falls back to normal post) */
-var f=$('#f'),sb=$('#sb'),msg=$('#msg');
+var f=$('#f'),sb=$('#sb'),msg=$('#msg'),cq=$('#captcha-question'),ca=$('#captcha-answer'),cr=$('#captcha-refresh');
+var captchaAnswer=0;
+function newCaptcha(){
+ var a=Math.floor(Math.random()*8)+2,b=Math.floor(Math.random()*8)+1;
+ captchaAnswer=a+b;cq.textContent=a+' + '+b+' = ?';ca.value='';
+}
+newCaptcha();
+cr.addEventListener('click',newCaptcha);
 f.addEventListener('submit',function(ev){
  if(!window.fetch||!window.FormData)return;
  ev.preventDefault();
+ if(Number(ca.value)!==captchaAnswer){msg.className='er';msg.textContent='Please solve the security check correctly.';newCaptcha();ca.focus();return}
  sb.disabled=true;sb.textContent='Sending…';msg.className='';msg.textContent='';
+ $('#replyto').value=$('#e').value;
  fetch('https://formsubmit.co/ajax/ujjwalshrivastaw742@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)})
  .then(function(r){return r.json()})
  .then(function(d){
-  if(d.success==='true'||d.success===true){f.reset();msg.className='ok';msg.textContent='Message sent. Thank you, I will reply soon.'}
+  if(d.success==='true'||d.success===true){f.reset();newCaptcha();msg.className='ok';msg.textContent='Message sent. Thank you, I will reply soon.'}
   else throw 0})
  .catch(function(){msg.className='er';msg.textContent='Could not send. Please email me directly at ujjwalshrivastaw742@gmail.com.'})
  .finally(function(){sb.disabled=false;sb.textContent='Send message'});
